@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/change/{{ objectId }}">
+    <label for="objectid">
+        Object to change
+    </label>
+    <input type="text" id="objectid" name="objectid" required/>
+    <label for="current-restriction">
+        The object's current restriction
+    </label>
+    <input type="text" id="current-restriction" name="current-restriction" required/>
+    <label for="desired-restriction">The New Restriction You Want To Set</label>
+    <select id="desired-restriction" name="desired-restriction">
+        <option value="O">O</option>
+        <option value="OU">OU</option>
+        <option value="R-DA">R-DA</option>
+        <option value="DR-##">DR-##</option>
+        <option value="OO-##">OO-##</option>
+        <option value="R-30">R-30</option>
+        <option value="R-50">R-50</option>
+        <option value="R-80">R-80</option>
+        <option value="R-##D">R-##D</option>
+        <option value="R-X">R-X</option>
+        <option value="RP30">RP30</option>
+        <option value="MR-ISODATE">MR-ISODATE</option>
+        <option value="R-S">R-S</option>
+    </select>
+    <input type="submit" value="Proceed to Next Step"/>
+</form>
+
+{% endblock %}

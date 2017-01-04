@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/">
+    <label for="objectid">
+        Enter the identifier for the object you want to change restrictions for. It should look like firstPartOfAnIdentifier/secondPartOfAnIdentifier
+    </label>
+    <input type="text" required id="objectid" name="objectid"/>
+    <input type="submit" value="Proceed to Next Step"/>
+</form>
+
+{% endblock %}
