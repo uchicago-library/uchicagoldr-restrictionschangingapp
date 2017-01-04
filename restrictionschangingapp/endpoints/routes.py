@@ -1,15 +1,15 @@
 from flask import Blueprint, request, render_template
 
-APP_ROUTES = Blueprint('ldrrestrictionschanging', __name__, template_folder='templates')
+BP = Blueprint('ldrrestrictionschanging', __name__, template_folder='templates')
 
-@APP_ROUTES.route("/", methods=["GET", "POST"])
+@BP.route("/", methods=["GET", "POST"])
 def select_an_object():
     """fill in please
     """
     return render_template("front.html")
 
 
-@APP_ROUTES.route("/change/<str:objid>", methods=["GET", "POST"])
+@BP.route("/change/<str:objid>", methods=["GET", "POST"])
 def make_a_change(objid):
     """fill in please
     """
