@@ -7,19 +7,21 @@
     <label for="objectid">
         Object to change
     </label>
-    <input class="form-control" type="text" id="object-id" name="object-id" value="{{ objectToChange }}" required/>
+    <input class="form-control" type="text" id="object-id" name="object-id" value="{{ objectToChange }}"
+           required="True", readonly="True"/>
     </div>
 
     <div class="form-group">
     <label for="current-restriction">
         The object's current restriction
     </label>
-    <input class="form-control" type="text" id="current-restriction" name="current-restriction" value="{{ currentRestriction }}" required/>
+    <input class="form-control" type="text" id="current-restriction" name="current-restriction" value="{{ currentRestriction }}" required
+           required="True", readonly="True"/>
     </div>
 
     <div class="form-group">
     <label for="desired-restriction">The New Restriction You Want To Set</label>
-    <select class="form-control" id="desired-restriction" name="desired-restriction">
+    <select class="form-control" id="desired-restriction" name="desired-restriction" required="True">
         <option value="O">O</option>
         <option value="OU">OU</option>
         <option value="R-DA">R-DA</option>
