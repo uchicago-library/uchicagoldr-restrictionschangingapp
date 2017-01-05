@@ -1,17 +1,25 @@
 {% extends "base.html" %}
+
 {% block content %}
 
-<form method="POST" action="/change/{{ objectId }}">
+<form method="POST" action="{{ url }}">
+    <div class="form-group">
     <label for="objectid">
         Object to change
     </label>
-    <input type="text" id="objectid" name="objectid" required/>
+    <input class="form-control" type="text" id="object-id" name="object-id" value="{{ objectToChange }}" required/>
+    </div>
+
+    <div class="form-group">
     <label for="current-restriction">
         The object's current restriction
     </label>
-    <input type="text" id="current-restriction" name="current-restriction" required/>
+    <input class="form-control" type="text" id="current-restriction" name="current-restriction" value="{{ currentRestriction }}" required/>
+    </div>
+
+    <div class="form-group">
     <label for="desired-restriction">The New Restriction You Want To Set</label>
-    <select id="desired-restriction" name="desired-restriction">
+    <select class="form-control" id="desired-restriction" name="desired-restriction">
         <option value="O">O</option>
         <option value="OU">OU</option>
         <option value="R-DA">R-DA</option>
@@ -26,9 +34,13 @@
         <option value="MR-ISODATE">MR-ISODATE</option>
         <option value="R-S">R-S</option>
     </select>
-    <label for="comment">Comment About the New Restriction</label>
-    <input type="text" id="comment" name="comment"/>
-    <input type="submit" value="Proceed to Next Step"/>
+    </div>
+
+    <div class="form-group">
+     <label for="comment">Comment About the New Restriction</label>
+    <input class="form-control" type="text" id="comment" name="comment"/>
+    </div>
+    <input type="submit" value="Change"/>
 </form>
 
-{% endblock %}
+{% endblock content %}

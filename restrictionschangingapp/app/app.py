@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask
 from ..endpoints.routes import BP
 
 APP = Flask(__name__)

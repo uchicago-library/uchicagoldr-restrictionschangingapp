@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>The restriction for object {{ objectChanged }} was changed from {{ oldRestriction }} to {{ newRestriction }}</p>
+
+<p>The reason for this change was:</p>
+<p>{{ restrictionComment }}</p>
+{% endblock content %}
