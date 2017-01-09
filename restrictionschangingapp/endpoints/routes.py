@@ -73,7 +73,6 @@ def make_a_change(accessionid, objid):
     current_restriction = ','.join(current_restrictions)
     current_accession = accessionid
     current_object = "{}/{}".format(current_accession, objid)
-
     if request.method == "POST":
         form = request.form
         last_restriction = form.get("current-restriction")
