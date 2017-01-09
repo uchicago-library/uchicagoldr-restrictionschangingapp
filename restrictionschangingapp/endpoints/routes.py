@@ -24,11 +24,6 @@ def make_new_rights_element(extension_id, restricted_object_id, restriction_code
 
 BP = Blueprint('ldrrestrictionschanging', __name__, template_folder='templates')
 
-#identifier = "rqrh1jcd8r4w1/fdfc7dec773811e6b4d10025904dfbb0"
-#identifier2 = "rqrh1jcd8r4w1/fdfc60c876bd11e690300025904dfbb0"
-#identifer3 = "85z3wb5404q05/f3b3225c96fd11e6a879ac87a336bfd3"
-#identifier4 = "przfqp7h034j2/faa74688970211e6afccac87a336bfd3"
-
 @BP.route("/", methods=["GET", "POST"])
 def select_an_object():
     """fill in please
